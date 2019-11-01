@@ -1,0 +1,20 @@
+name: Extractor
+main: JackMD\Extractor\Extractor
+api: 3.0.0
+depend: DevTools
+author: JackMD
+version: 1.0.0
+
+commands:
+  extractall:
+    description: Extract all the plugins
+    permission: extractor.extractall
+
+permissions:
+  extract:
+    default: false
+    description: Access to everything in this plugin
+    children:
+      extractor.extractall:
+        default: op
+        description: Access to /extract command
